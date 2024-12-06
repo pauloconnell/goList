@@ -1,4 +1,4 @@
-const WebSocket = require("ws");
+import expressWs from 'express-ws';
 
 const wss = new WebSocket.Server({ port: 8082 });
 

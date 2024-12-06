@@ -1,14 +1,22 @@
-const express = require("express");
-const path = require('path');
+import express from 'express';
+
+import path from 'path';
 const app = express();
 // Import and configure dotenv
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
-const bodyParser = require("body-parser");
-const { body, validationResult } = require("express-validator");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const shortid = require("shortid");
+
+import bodyParser from 'body-parser';
+
+import { body, validationResult } from 'express-validator';
+
+import cors from 'cors';
+
+import mongoose from 'mongoose';
+
+import shortid from 'shortid';
+
 var ourUserArray = []; // this will hold our users from DB
 var exerciseObject = {};
 var finalDocArray = [];
@@ -48,12 +56,12 @@ const exerciselogDB = mongoose.model("exercisecollections", exerciseSchema);
 console.log("mongoose is: " + mongoose.connection.readyState);
 
 //add static file - style.css
-app.use(express.static(path.join(process.cwd(), "/frontend/public")));
+app.use(express.static(path.join(process.cwd(), "public")));
 
 //define our routes This challenge requires routes be included in server ( instead of seperating API routes to Public folder)
 app.get("/", (req, res) => {
   console.log("in .get")
-  res.sendFile(process.cwd() + "/frontend/public/index.html");
+  res.sendFile(path.join(process.cwd(), "public", "index.html"));
 });
 
 // Error Handling middleware
