@@ -28,7 +28,7 @@ mongoose.connect(process.env.DB_URI, {
   useUnifiedTopology: true
 });
 
-console.log("ENV IS ",process.env.DB_URI);
+//console.log("ENV IS ",process.env.DB_URI);
 // Make Mongoose use `findOneAndUpdate()`. Note that this option is `true` by default, you need to set it to false.
 mongoose.set("useFindAndModify", false);
 app.use(cors());
