@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Exercise Tracker</title>
+    <title>Exercise Tracker  </title>
+
     <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link
@@ -17,7 +18,9 @@
   <body>
     <div id="root"></div>
     <div class="center">
-      <h1 id="title" class="textAlign">Exercise Tracker in SRC rendering React</h1>
+      <h1 id="title" class="textAlign">Exercise Tracker</h1>
+      <h2> Not this one -> this one is server direct - you ran npm start(started server)
+        run npm run dev to get vite script to launch react</h2>
       <br />
       <hr />
       <div class="smooth textAlign padding center">
@@ -142,6 +145,7 @@
       </center>
     </div>
     <script> console.log("index.html is being loaded!"); </script>
-    <script type="module" src="/main.jsx" onerror="console.error('Failed to load script: main.jsx')"></script>
+    <script type="module" src="/src/main.jsx" onerror="console.error('Failed to load script: main.jsx'); console.log('Current Path:', window.location.pathname);
+    "></script>
   </body>
 </html>

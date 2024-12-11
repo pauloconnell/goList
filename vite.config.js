@@ -13,13 +13,13 @@ export default defineConfig({
   publicDir: 'public', // Define the public directory for images .css ect
 
 
-//   build: {
-//     outDir: 'dist',// Define the output directory
-//     rollupOptions: { 
-//         input: 'public/index.html', // Explicitly define the entry point 
+   build: {
+     outDir: '/public/dist',// Define the output directory
+     rollupOptions: { 
+         input: 'public/index.html', // Explicitly define the entry point 
 //         output: {
 //             entryFileNames: 'assets/[name].js', chunkFileNames: 'assets/[name].js', assetFileNames: 'assets/[name].[ext]', 
 //         }
-//     },
-//   },
+     },
+   },
 });

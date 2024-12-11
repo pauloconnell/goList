@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "vite",
+    "dev": "vite --config vite.config.js",
     "build": "vite build",
     "serve": "vite preview"
   },
@@ -22,6 +22,7 @@
     "mongoose": "^5.9.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.0.2",
     "shortid": "^2.2.15"
   },
   "engines": {
